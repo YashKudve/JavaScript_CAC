@@ -1,5 +1,5 @@
 const mySym = Symbol()
-const user = {
+const jsUser = {
     name: 'user2',
     age:15,
     location:"Mumbai",
@@ -13,4 +13,10 @@ const user = {
 // console.table([user.name, user.age,user.location])
 
 // console.log(mySym)
-console.log(user[mySym])
+// console.log(user[mySym])
+
+jsUser.greeting = function(){
+    console.log("Hello user")
+}
+
+console.log(jsUser.greeting)
