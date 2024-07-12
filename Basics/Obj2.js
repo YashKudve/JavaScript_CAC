@@ -1,7 +1,13 @@
 const userOne = {
-    name: 'userOne',
+    name: "userOne",
     age:20,
-    userMessage: function () {
-        console.log(`Dear ${userOne.name}, welcome onboard! `);
+    message: function(){
+        console.log(`Dear ${this.name}, welcome onboard!`)
     }
 }
+
+userOne.message()
+
+userOne.name="Yash"
+
+userOne.message()
