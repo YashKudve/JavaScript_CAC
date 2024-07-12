@@ -20,3 +20,28 @@ jsUser.greeting = function(){
 }
 
 console.log(jsUser.greeting)
+
+let c = 400
+
+if (true) {
+    const a = 9
+    let b = 0
+    // let c = 10
+    console.log("value of c is: ",c)
+}
+
+function one(){
+    let username= "Shivam"
+
+    function two(){
+        let email="yash@google.com"
+
+        console.log("Username is: ",username)
+        console.log("Email is: ",email)
+
+    }
+
+    two()
+}
+
+one()
