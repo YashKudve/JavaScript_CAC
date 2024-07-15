@@ -9,7 +9,7 @@
 //     console.log('**************************************')
 // }
 
-// break statement
+// ********************************************break statement**************************************
 
 // for (let index = 0; index < 11; index++) {
 //     console.log(`The number is ${index}`)
@@ -21,7 +21,7 @@
     
 // }
 
-// continue statement
+// ***********************************************continue statement*************************************
 
 // for (let index = 0; index < 11; index++) {
 //     console.log(`The number is ${index}`)

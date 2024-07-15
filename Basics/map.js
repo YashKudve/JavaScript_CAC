@@ -7,7 +7,7 @@ map.set('UK',"United Kingdom")
 
 // console.log(map)
 
-// key-value destructuring
+// ****************************key-value destructuring*******************************
 for (const [key, value] of map) {
     console.log(key ,'-->', value)
 }

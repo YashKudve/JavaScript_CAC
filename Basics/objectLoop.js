@@ -16,5 +16,5 @@ for (const key in myObject) {
     // console.log(key) --> this prints key
     // console.log(myObject[key]) --> this prints value
 
-    console.log(`'${key}' shortcut is for '${myObject[key]}'`)
+    console.log(`${key} ===> ${myObject[key]}`)
 }
