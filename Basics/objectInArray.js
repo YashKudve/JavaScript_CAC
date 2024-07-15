@@ -55,13 +55,13 @@ const books = [
     },
     {
         title:"Book2",
-        genre:"Story",
+        genre:"Comic",
         publish: 2010,
         edition: 2015
     },
     {
         title:"Book3",
-        genre:"Drama",
+        genre:"Sci-Fi",
         publish: 2010,
         edition: 2019
     },
@@ -79,13 +79,13 @@ const books = [
     },
     {
         title:"Book6",
-        genre:"Novels",
+        genre:"Geography",
         publish: 2020,
         edition: 2023
     },
     {
         title:"Book7",
-        genre:"Non-fiction",
+        genre:"Sci-Fi",
         publish: 2006,
         edition: 2016
     },
@@ -96,3 +96,15 @@ const books = [
         edition: 2019
     },
 ]
+
+const useBooks = books.filter((bk)=>(
+    bk.genre === 'Comic'
+))
+
+console.log(useBooks)
+
+const published = books.filter((pb)=>(
+    pb.publish >= 2010
+))
+
+console.log(published)
