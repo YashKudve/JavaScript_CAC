@@ -26,3 +26,25 @@
 // for (const place of country) {
 //    console.log(place) 
 // }
+
+
+// ***************************for-in loop**************************************
+
+const programming = ['java','python','ruby','swift','cpp']
+
+for (const key in programming) {
+    // console.log(key)
+    // console.log(programming[key])
+}
+
+
+// *****************************for-each loop*********************************
+
+const coding = ['java','python','ruby','swift','cpp']
+
+// coding.forEach((item)=>(console.log(`The items in the list are: ${item}`)))
+
+coding.forEach((item,index,arr)=>(
+    console.log(item,index,arr)
+    
+))
