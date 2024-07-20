@@ -50,10 +50,23 @@
     //     e.stopPropagation()
     // }, true)
 
-    document.getElementById('google').addEventListener('click',function(e){
-        e.preventDefault()
-        console.log("Google clicked")
+    // ****************Prevent Default actions*************
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     console.log("Google clicked")
         
-    }, false)
+    // }, false)
+
+    // ********************** Remove item ***************************
+
+    document.querySelector('#images').addEventListener('click', function(e){
+
+        console.log(e.target.tagName)
+
+        if(e.target.tagName === "IMG"){
+            let removeItem = e.target.parentNode
+            removeItem.remove()
+        }
+    })
 </script>
 </html>
