@@ -11,7 +11,14 @@ const randomColor = function(){
 
 // console.log(randomColor())
 
-const startColorChange = function(){}
+function changeBgColor(){
+    document.body.style.backgroundColor = randomColor()
+}
+
+const startColorChange = function(){
+    setInterval(changeBgColor,1000,false)
+}
+
 const stopColorChange = function(){}
 
 document.querySelector('#start').addEventListener('click', startColorChange)
