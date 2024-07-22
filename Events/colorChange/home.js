@@ -10,16 +10,18 @@ const randomColor = function(){
 }
 
 // console.log(randomColor())
-
+let intervalId
 function changeBgColor(){
-    document.body.style.backgroundColor = randomColor()
+   document.body.style.backgroundColor = randomColor()
 }
 
 const startColorChange = function(){
-    setInterval(changeBgColor,1000,false)
+    intervalId = setInterval(changeBgColor,1000)
 }
 
-const stopColorChange = function(){}
+const stopColorChange = function(){
+    clearInterval(intervalId)
+}
 
 document.querySelector('#start').addEventListener('click', startColorChange)
 document.querySelector('#stop').addEventListener('click', stopColorChange)
