@@ -34,24 +34,47 @@
 
 // **************** Promise 4 ****************
 
-const promiseFour = new Promise(function(resolve,reject){
+// const promiseFour = new Promise(function(resolve,reject){
 
+//     setTimeout(function(){
+//         let error = true;
+
+//         if (!error) {
+//             resolve({username:'ABC', password:"123"})
+//         } else {
+//             reject('ERROR: Something went wrong')
+//         }
+//     },1000)
+// })
+
+// promiseFour.then((user)=>{
+//     console.log(user);
+//     return user.username;
+// }).then((username)=>{
+//     console.log(username);
+// }).catch((error)=>{
+//     console.log(error)
+// }).finally(()=>console.log('The promise is either resolved or rejected...'))
+
+// *********** Promise 5 ******************
+
+const promiseFive = new Promise(function(resolve,reject){
     setTimeout(function(){
-        let error = true;
-
+        let error = false;
         if (!error) {
-            resolve({username:'ABC', password:"123"})
+            resolve({username:'JavaScript', password:'1234'})
         } else {
-            reject('ERROR: Something went wrong')
+            reject("Something went wrong")
         }
     },1000)
 })
 
-promiseFour.then((user)=>{
-    console.log(user);
-    return user.username;
-}).then((username)=>{
-    console.log(username);
-}).catch((error)=>{
-    console.log(error)
-}).finally(()=>console.log('The promise is either resolved or rejected...'))
+async function consumePromiseFive(){
+    try {
+        const response = await promiseFive
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+consumePromiseFive()
