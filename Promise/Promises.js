@@ -81,16 +81,24 @@
 
 // ********************************************
 
-async function getAllUsers(){
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users')
-        // console.log(response)
-        const data = await response.json()
-        console.log(data)
+// async function getAllUsers(){
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         // console.log(response)
+//         const data = await response.json()
+//         console.log(data)
 
-    } catch (error) {
-        console.log(error);
-    }
-}
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-getAllUsers()
+// getAllUsers()
+
+// *********another method to do above task*****
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+    return response.json()
+}).then((data)=>console.log(data))
+.catch((err)=>console.log(err))
