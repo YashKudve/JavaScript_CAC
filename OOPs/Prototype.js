@@ -1,26 +1,60 @@
-// let myName = 'Yash   '
-// console.log(myName.length);
-// console.log(myName.trueLength());
+// // let myName = 'Yash   '
+// // console.log(myName.length);
+// // console.log(myName.trueLength());
 
-let myHeros = ['thor', 'spiderman']
+// let myHeros = ['thor', 'spiderman']
 
-let heroPower = {
-    thor:'hammer',
-    spiderman:'sling',
+// let heroPower = {
+//     thor:'hammer',
+//     spiderman:'sling',
 
-    getSpiderPower: function(){
-        console.log(`Spiderman power is ${this.spiderman}`);
-    }
+//     getSpiderPower: function(){
+//         console.log(`Spiderman power is ${this.spiderman}`);
+//     }
+// }
+
+// Object.prototype.yash = function(){
+//     console.log(`Yash is present in all objects`);
+// }
+
+// Array.prototype.heyYash = function(){
+//     console.log('HELLO YASH');
+// }
+
+// heroPower.yash()
+
+// myHeros.heyYash()
+
+const User = {
+    username:"user",
+    email:'user@gmail.com'
 }
 
-Object.prototype.yash = function(){
-    console.log(`Yash is present in all objects`);
+const Teacher = {
+    makeVideo : true
 }
 
-Array.prototype.heyYash = function(){
-    console.log('HELLO YASH');
+const TeachingSupport = {
+    isAvailable: false
 }
 
-heroPower.yash()
+const TASupport = {
+    makeAssignment:'JS assignment',
+    fullTime: true,
+    __proto__: TeachingSupport
+}
 
-myHeros.heyYash()
+//Modern Syntax
+
+Object.setPrototypeOf(TeachingSupport,Teacher)
+
+// ***********
+
+let anotherUser = 'UserTwo      '
+
+String.prototype.getTrueLength = function(){
+    console.log(`${this}`);
+    console.log(`True length is: ${this.trim().length}`);
+}
+
+anotherUser.getTrueLength()
