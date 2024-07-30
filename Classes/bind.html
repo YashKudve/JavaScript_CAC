@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
     <button>Button Clicked</button>
@@ -14,10 +20,16 @@
         constructor(){
             this.library = 'React';
             this.server = 'https://localhost:3000'
+
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
         }
+
 
         handleClick(){
             console.log("Button Clicked");
+            console.log(this.server);
         }
     }
 
